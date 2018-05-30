@@ -1,0 +1,4 @@
+--require ts-node/register
+--ui tdd
+--watch-extensions ts
+./test/**/*.test.ts
