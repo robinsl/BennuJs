@@ -3,4 +3,5 @@ export class CacheObjetConfigVar {
     ttl: number;
     grace: number;
     extraKey: StringMap<string>;
+    refreshing?: boolean;
 }

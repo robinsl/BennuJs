@@ -3,13 +3,11 @@ import {CacheObjetConfigVar} from "../types/cache-objet-config.var";
 import {InvalidatorInterface} from "./invalidator.interface";
 
 export interface CacheEngineInterface {
-    get(key: string): Promise<CacheObjectVar>;
+    get(key: string): Promise<string>;
 
-    update(key: string, value: string, extraKeyValue: StringMap<string>): Promise<CacheObjectVar>;
+    update(key: string, value: string): Promise<string>;
 
-    set(key: string, value: string, extraKeyValue: StringMap<string>, ttl: number, grace: number, invalidators: InvalidatorInterface[]): Promise<CacheObjectVar>;
+    set(key: string, value: string, ttl: number, grace: number): Promise<string>;
 
-    fetch(key: string, extraKeyValue: StringMap<string>, ttl: number, grace: number, populatingFunction: (config: CacheObjetConfigVar) => Promise<string>, invalidators: InvalidatorInterface[]): Promise<CacheObjectVar>;
-
-    clear(key: string): Promise<CacheObjectVar>;
+    clear(key: string): Promise<string>;
 }
