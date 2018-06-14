@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "ES6"],
     "target": "es5",
     "module": "commonjs",
+    "experimentalDecorators": true,
     "declaration": true,
     "noImplicitAny": true,
     "removeComments": true,
